@@ -1,0 +1,40 @@
+.presentation-container
+{
+    @include center(center);
+
+    .presentation-contain
+    {
+        display: grid;
+        grid-template-areas:
+        "left right"
+        "center center";
+        gap: 50px;
+        max-width: 1200px;
+        text-align: center;
+    }
+    .left-contain{grid-area: left;}
+    .center-contain{grid-area: center;}
+    .right-contain{grid-area: right;}
+
+    .left-contain, .right-contain
+    {
+        border-bottom: 2px solid $red-color;
+    }
+    .left-contain
+    {
+        border-right: 2px solid $red-color;
+    }
+    .right-contain
+    {
+        border-left: 2px solid $red-color;
+    }
+    .center-contain
+    {
+        border-top: 2px solid $red-color;
+    }
+    .contain
+    {
+        border-radius: $contain-radius;
+        padding: 40px;
+    }
+}

@@ -1,0 +1,68 @@
+.header-container
+{
+    height: 100vh;
+    @include center(center);
+
+    @media screen and (max-width:900px)
+    {
+        height: auto;
+        padding: 150px 0;
+    }
+
+    .header-contain
+    {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 150px;
+
+        .left-contain
+        {
+            position: relative;
+            align-self: center;
+            .button-content
+            {
+                @include center(center);
+                a
+                {
+                    display: inline-block;
+                    margin: 50px auto;
+                    padding: 10px 40px;
+                    border-radius: $button-radius;
+                    background-color: $button-color;
+                    color: black;
+                }
+            }
+            h2
+            {
+                margin: 5px 0;
+            }
+            h4
+            {
+                margin: 20px 0;
+            }
+            .social-links
+            {
+                @include center(center);
+                li a
+                {
+                    margin: 0 5px;
+                }
+            }
+        }
+
+        .img-contain
+        {
+            max-width: 400px;
+            max-height: 400px;
+            overflow: hidden;
+            border-radius: 20%;
+            box-shadow: -4px 4px 30px rgba(64, 222, 233, 0.177);
+
+            @include center(center);
+            img
+            {
+                width: 135%;
+            }
+        }
+    }
+}

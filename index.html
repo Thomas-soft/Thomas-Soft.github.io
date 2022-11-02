@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/pages/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <p><strong>Portfolio</strong></p>
+        </div>
+        <ul class="links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#presentation">Présentation</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header class="header-container" id="home">
+            <div class="header-contain">
+                <div class="left-contain">
+                    <h1>Thomas Soft</h1>
+                    <h2>Passionné d'informatique</h2>
+                    <h4 id="myDescription">Site en cours de développement...</h4>
+                    <div class="button-content">
+                        <a href="#presentation">Présentation</a>
+                    </div>
+                    <ul class="social-links">
+                        <li><a href="https://www.instagram.com/dev.thomas.soft" class="fa-brands fa-github"></a></li>
+                        <li><a href="https://github.com/Thomas-soft" class="fa-brands fa-instagram"></a></li>
+                    </ul> 
+                </div>
+                <div class="img-contain">
+                    <img src="./assets/img/me.jpg" alt="Logo de Thomas Soft">
+                </div>
+            </div>
+        </header>
+
+        <section class="presentation-container" id="presentation">
+            <div class="presentation-contain">
+                <div class="left-contain contain">
+                    <h3>Mes débuts</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo corporis ducimus odio aspernatur quod minus voluptas libero possimus qui, reiciendis a, dolores sunt fugiat modi minima hic ratione necessitatibus laborum?
+                    </p>
+                </div>
+                <div class="center-contain contain">
+                    <h3>Pourquoi l'informatique ?</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus aperiam sequi aspernatur maxime impedit aliquam et nihil, ipsum ipsam quos iusto tenetur optio veniam blanditiis autem illo fugit porro! Facere!
+                    </p>
+                </div>
+                <div class="right-contain contain">
+                    <h3>Mes ambitions</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis vel quisquam dolores est eum quam repellendus ad laboriosam sequi! Ullam est pariatur cupiditate excepturi quis aliquid quaerat, provident dignissimos repellendus!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="competences-container" id="competences">
+            <div class="competences-contain">
+                <h2>Mes compétences</h2>
+
+                <div class="web-contain">
+                    <div class="front web">
+                        <h3>Développement Web Front-End</h3>
+                        <p>HTML, CSS, JavaScript</p>
+                        <div class="web-progress front-progress progress">
+                            <h4>90%</h4>
+                        </div>
+                    </div>
+                    <div class="back web">
+                        <h3>Développement Web Back-End</h3>
+                        <p>PHP my admin, mysql</p>
+                        <div class="web-progress back-progress progress">
+                            <h4>10%</h4>
+                        </div>
+                    </div>
+                </div>
+                <article class="programmation-container">
+                    <h3>Algorithmie</h3>
+                    <div class="programmation-contain">
+                        <div class="python language">
+                            <p>Python</p>
+                            <div class="programmation-progress python-progress progress">
+                                <h4>7/10</h4>
+                            </div>
+                        </div>
+                        <div class="c language">
+                            <p>C</p>
+                            <div class="programmation-progress c-progress progress">
+                                <h4>6/10</h4>
+                            </div>
+                        </div>
+                        <div class="js language">
+                            <p>JavaScript</p>
+                            <div class="programmation-progress js-progress progress">
+                                <h4>4/10</h4>
+                            </div>
+                        </div>
+                        <div class="php language">
+                            <p>PHP</p>
+                            <div class="programmation-progress php-progress progress">
+                                <h4>1/10</h4>
+                            </div>
+                        </div>               
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-container" id="contact">
+            <h3>Me contacter</h3>
+            <form class="contact-contain" action="">
+                <div class="username-contain contain">
+                    <label for="name">Nom</label>
+                    <input class="input-username" type="text" id="name" placeholder="Votre nom">
+                </div>
+                <div class="email-contain contain">
+                    <label for="email">Email</label>
+                    <input class="input-email" type="email" id="email" placeholder="Votre email">
+                </div>
+                <div class="title-contain contain">
+                    <label for="title">Sujet</label>
+                    <input class="input-title" type="text" id="title" placeholder="Sujet">
+                </div>
+                <div class="description-contain contain">
+                    <label for="description">Message</label>
+                    <textarea class="input-description" id="description" placeholder="Description"></textarea>
+                </div>
+                <div class="submit-content">
+                    <button type="submit">Envoyer</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="social-container">
+            <div class="social-contain">
+                <a href="https://www.instagram.com/dev.thomas.soft/" target="_blank" class="insta rect">
+                    <i class="uil uil-instagram"></i>
+                    <div class="insta-name"></div>
+                </a>
+                <a href="https://github.com/dev-thomas-soft" target="_blank" class="github rect">
+                    <i class="uil uil-github"></i>
+                    <div class="github-name"></div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Copyright <time datetime="2022">2022</time>. Tous les droits sont réservés</p>
+    </footer>
+
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
+
+<!-- 
+    <ul id="socialLinks">
+        <li><a href="https://www.instagram.com/dev.thomas.soft" class="fa-brands fa-github"></a></li>
+        <li><a href="https://github.com/Thomas-soft" class="fa-brands fa-instagram"></a></li>
+    </ul> 
+-->

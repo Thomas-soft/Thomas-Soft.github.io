@@ -1,0 +1,111 @@
+.competences-container
+{
+    @include center(center);
+    margin: 200px 0;
+    background-color: $second-color;
+    border-radius: $contain-radius;
+
+    .competences-contain
+    {
+        width: 90%;
+        margin: 50px 0;
+        h2
+        {
+            text-align: center;
+        }
+        .web-contain, .programmation-contain
+        {
+            display: grid;
+            gap: 20px;
+        }
+        .web-contain
+        {
+            grid-template-rows: repeat(2, 1fr);
+        }
+        .programmation-contain
+        {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+        .web-contain, .programmation-container
+        {
+            margin: 80px 0;
+
+            p
+            {
+                margin: 5px;
+            }
+            h3
+            {
+                text-align: center;
+                margin-top: 10px;
+            }
+            .progress
+            {
+                width: 100%;
+                height: $progress-height;
+                background-color: $main-color;
+                border-radius: 200px;
+
+                h4
+                {
+                    @include center(center);
+                    text-align: center;
+                    height: 100%;
+                    border-radius: 200px;
+                    font-size: 1.2rem;
+                }
+            }
+
+            .front-progress
+            {
+                h4
+                {
+                    width: 90%;
+                    background: linear-gradient(90deg, $red-color 0%,$purple-color calc((100%/90)*100));
+                }
+            }
+            .back-progress
+            {
+                h4
+                {
+                    width: 10%;
+                    background: linear-gradient(90deg, $red-color 0%,$purple-color calc((100%/10)*100));
+                }
+            }
+
+            .python-progress
+            {
+                h4
+                {
+                    width: 70%;
+                    background: linear-gradient(90deg, $red-color 0%,$purple-color calc((100%/70)*100));
+                }
+            }
+            .c-progress
+            {
+                h4
+                {
+                    width: 60%;
+                    background: linear-gradient(90deg, $red-color 0%,$purple-color calc((100%/60)*100));
+                }
+            }
+            .js-progress
+            {
+                h4
+                {
+                    width: 40%;
+                    background: linear-gradient(90deg, $red-color 0%,$purple-color calc((100%/40)*100));
+                }
+            }
+            .php-progress
+            {
+                h4
+                {
+                    width: 10%;
+                    background: linear-gradient(90deg, $red-color 0%,$purple-color calc((100%/10)*100));
+                }
+            }
+        }
+    }
+}
