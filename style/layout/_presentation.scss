@@ -37,4 +37,21 @@
         border-radius: $contain-radius;
         padding: 40px;
     }
+
+    @media screen and (max-width: 900px)
+    {
+        .presentation-contain
+        {
+            grid-template-areas:
+            "left"
+            "right"
+            "center";
+        }
+        .center-contain
+        {
+            border-right: 2px solid $red-color;
+            border-bottom: 2px solid $red-color;
+            border-top: transparent;
+        }
+    }
 }

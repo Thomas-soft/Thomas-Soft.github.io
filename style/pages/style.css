@@ -108,6 +108,11 @@ nav .links li:hover::after {
           transform: translateX(-50%) scaleX(1);
   opacity: 1;
 }
+@media screen and (max-width: 900px) {
+  nav .links {
+    display: none;
+  }
+}
 
 .header-container {
   height: 100vh;
@@ -120,12 +125,6 @@ nav .links li:hover::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-@media screen and (max-width: 900px) {
-  .header-container {
-    height: auto;
-    padding: 150px 0;
-  }
 }
 .header-container .header-contain {
   display: grid;
@@ -200,6 +199,7 @@ nav .links li:hover::after {
   border-radius: 20%;
   -webkit-box-shadow: -4px 4px 30px rgba(64, 222, 233, 0.177);
           box-shadow: -4px 4px 30px rgba(64, 222, 233, 0.177);
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,6 +212,20 @@ nav .links li:hover::after {
 }
 .header-container .header-contain .img-contain img {
   width: 135%;
+}
+@media screen and (max-width: 900px) {
+  .header-container .header-contain {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .header-container .header-contain .img-contain {
+    grid-row: 1;
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .header-container .header-contain .left-contain {
+    grid-row: 2;
+  }
 }
 
 .presentation-container {
@@ -257,6 +271,16 @@ nav .links li:hover::after {
   border-radius: 20px;
   padding: 40px;
 }
+@media screen and (max-width: 900px) {
+  .presentation-container .presentation-contain {
+    grid-template-areas: "left" "right" "center";
+  }
+  .presentation-container .center-contain {
+    border-right: 2px solid #e2364d;
+    border-bottom: 2px solid #e2364d;
+    border-top: transparent;
+  }
+}
 
 .competences-container {
   display: -webkit-box;
@@ -289,6 +313,12 @@ nav .links li:hover::after {
 .competences-container .competences-contain .programmation-contain {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
+}
+@media screen and (max-width: 900px) {
+  .competences-container .competences-contain .programmation-contain {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
 }
 .competences-container .competences-contain .web-contain, .competences-container .competences-contain .programmation-container {
   margin: 80px 0;

@@ -3,12 +3,6 @@
     height: 100vh;
     @include center(center);
 
-    @media screen and (max-width:900px)
-    {
-        height: auto;
-        padding: 150px 0;
-    }
-
     .header-contain
     {
         display: grid;
@@ -67,12 +61,27 @@
             overflow: hidden;
             border-radius: 20%;
             box-shadow: -4px 4px 30px rgba(64, 222, 233, 0.177);
+            margin: 0 auto;
 
             @include center(center);
             img
             {
                 width: 135%;
             }
+        }
+
+        @media screen and (max-width: 900px)
+        {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+
+            .img-contain
+            {
+                grid-row: 1;
+                max-width: 200px;
+                max-height: 200px;
+            }
+            .left-contain{grid-row: 2;}
         }
     }
 }
