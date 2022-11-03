@@ -54,41 +54,27 @@ window.addEventListener("click", (e) =>
 window.addEventListener("scroll", () =>
 {
     let percentScroll = window.scrollY*100/(document.body.offsetHeight-window.innerHeight);
-    console.log(percentScroll);
-    if (percentScroll > 13)
+
+    if (percentScroll > 2)
     {
         presentation_contain_left.style.transform = "translateX(0)";
         presentation_contain_left.style.opacity = 1;
+    }
+    if (percentScroll > 17)
+    {
         presentation_contain_right.style.transform = "translateX(0)";
         presentation_contain_right.style.opacity = 1;
     }
-    else
-    {
-        presentation_contain_left.style.transform = "translateX(-100px)";
-        presentation_contain_left.style.opacity = 0;
-        presentation_contain_right.style.transform = "translateX(100px)";
-        presentation_contain_right.style.opacity = 0;
-    }
-    if (percentScroll > 20)
+    if (percentScroll > 33)
     {
         presentation_contain_center.style.transform = "translateY(0)";
         presentation_contain_center.style.opacity = 1;
-    }
-    else
-    {
-        presentation_contain_center.style.transform = "translateY(100px)";
-        presentation_contain_center.style.opacity = 0;
     }
 
     if (percentScroll > 38)
     {
         competences.style.transform = "translateY(0)";
         competences.style.opacity = 1;
-    }
-    else
-    {
-        competences.style.transform = "translateY(100px)";
-        competences.style.opacity = 0;
     }
 
     if (percentScroll > 40)
@@ -101,14 +87,9 @@ window.addEventListener("scroll", () =>
         php_progress.style.width = 10+'%';
     }
 
-    if (percentScroll > 65)
+    if (percentScroll > 70)
     {
         contact.style.transform = "translateY(0)";
         contact.style.opacity = 1;
-    }
-    else
-    {
-        contact.style.transform = "translateY(100px)";
-        contact.style.opacity = 0;
     }
 });
