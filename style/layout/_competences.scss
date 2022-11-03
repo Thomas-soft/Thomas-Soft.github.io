@@ -1,16 +1,16 @@
 .competences-container
 {
     @include center(center);
-    margin: 200px 0;
+    margin: 100px 0;
     background-color: $second-color;
     border-radius: $contain-radius;
 
     .competences-contain
     {
         width: 90%;
-        margin: 50px 0;
         h2
         {
+            margin-top: 20px;
             text-align: center;
         }
         .web-contain, .programmation-contain
@@ -35,7 +35,7 @@
         }
         .web-contain, .programmation-container
         {
-            margin: 80px 0;
+            margin: 40px 0;
 
             p
             {
@@ -110,6 +110,34 @@
                 {
                     width: 10%;
                     background: linear-gradient(90deg, $red-color 0%,$purple-color calc((100%/10)*100));
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px)
+    {
+        .competences-contain
+        {
+            .web-contain, .programmation-container
+            {
+                h3
+                {
+                    font-size: 1rem;
+                    margin: 10px 0;
+                }
+                p
+                {
+                    font-size: 0.8rem;
+                }
+
+                .progress
+                {
+                    height: 20px;
+                    h4
+                    {
+                        font-size: 0.8rem;
+                    }
                 }
             }
         }
