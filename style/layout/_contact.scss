@@ -5,6 +5,8 @@
     margin: 100px 0;
     background-color: $second-color;
     border-radius: $contain-radius;
+    transform: translateY($translate_animation);
+    opacity: 0;
 
     h3
     {
@@ -96,6 +98,6 @@
 
             transition: 0.3s ease;
         }
-
     }
+    transition: 0.3s ease;
 }

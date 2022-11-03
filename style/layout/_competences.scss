@@ -4,6 +4,8 @@
     margin: 100px 0;
     background-color: $second-color;
     border-radius: $contain-radius;
+    transform: translateY($translate_animation);
+    opacity: 0;
 
     .competences-contain
     {
@@ -58,8 +60,10 @@
                     @include center(center);
                     text-align: center;
                     height: 100%;
+                    width: 10%;
                     border-radius: 200px;
                     font-size: 1.2rem;
+                    transition: 2s ease;
                 }
             }
 
@@ -67,7 +71,6 @@
             {
                 h4
                 {
-                    width: 90%;
                     background: linear-gradient(90deg, $red-color 0%,$purple-color calc((100%/90)*100));
                 }
             }
@@ -75,7 +78,6 @@
             {
                 h4
                 {
-                    width: 10%;
                     background: linear-gradient(90deg, $red-color 0%,$purple-color calc((100%/10)*100));
                 }
             }
@@ -84,7 +86,6 @@
             {
                 h4
                 {
-                    width: 70%;
                     background: linear-gradient(90deg, $red-color 0%,$purple-color calc((100%/70)*100));
                 }
             }
@@ -92,7 +93,6 @@
             {
                 h4
                 {
-                    width: 60%;
                     background: linear-gradient(90deg, $red-color 0%,$purple-color calc((100%/60)*100));
                 }
             }
@@ -100,7 +100,6 @@
             {
                 h4
                 {
-                    width: 40%;
                     background: linear-gradient(90deg, $red-color 0%,$purple-color calc((100%/40)*100));
                 }
             }
@@ -108,7 +107,6 @@
             {
                 h4
                 {
-                    width: 10%;
                     background: linear-gradient(90deg, $red-color 0%,$purple-color calc((100%/10)*100));
                 }
             }
@@ -142,4 +140,6 @@
             }
         }
     }
+
+    transition: 0.3s ease;
 }

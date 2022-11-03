@@ -24,24 +24,30 @@
     .left-contain
     {
         border-right: 2px solid $red-color;
+        transform: translateX(-$translate_animation);
     }
     .right-contain
     {
         border-left: 2px solid $red-color;
+        transform: translateX($translate_animation);
     }
     .center-contain
     {
         border-top: 2px solid $red-color;
+        transform: translateY($translate_animation);
     }
     .contain
     {
         border-radius: $contain-radius;
         padding: 40px;
+        opacity: 0;
 
         h3
         {
             margin-bottom: 10px;
         }
+
+        transition: 1s ease;
     }
 
     @media screen and (max-width: 900px)
