@@ -60,12 +60,12 @@ window.addEventListener("scroll", () =>
         presentation_contain_left.style.transform = "translateX(0)";
         presentation_contain_left.style.opacity = 1;
     }
-    if (percentScroll > 17)
+    if (percentScroll > 12)
     {
         presentation_contain_right.style.transform = "translateX(0)";
         presentation_contain_right.style.opacity = 1;
     }
-    if (percentScroll > 33)
+    if (percentScroll > 25)
     {
         presentation_contain_center.style.transform = "translateY(0)";
         presentation_contain_center.style.opacity = 1;
