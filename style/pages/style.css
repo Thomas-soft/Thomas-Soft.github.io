@@ -24,6 +24,7 @@ main {
 
 a {
   text-decoration: none;
+  color: #67CAB9;
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -36,7 +37,18 @@ a, button {
   cursor: pointer;
 }
 
-nav {
+#main_page.open {
+  opacity: 0.3;
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#navbar {
   position: fixed;
   width: 100%;
   height: 100px;
@@ -56,14 +68,19 @@ nav {
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-nav .logo {
+#navbar .logo {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   font-size: 1.5rem;
 }
-nav .links {
+#navbar #links_container {
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+#navbar #links_container .links-contain {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,12 +93,12 @@ nav .links {
   width: 60%;
   max-width: 600px;
 }
-nav .links li {
+#navbar #links_container .links-contain li {
   position: relative;
   padding: 10px 20px;
   cursor: pointer;
 }
-nav .links li:after {
+#navbar #links_container .links-contain li:after {
   position: absolute;
   content: "";
   height: 100%;
@@ -101,15 +118,102 @@ nav .links li:after {
   transition: 0.3s ease;
   z-index: -1;
 }
-nav .links li:hover::after {
+#navbar #links_container .links-contain li:hover::after {
   -webkit-transform: translateX(-50%) scaleX(1);
       -ms-transform: translateX(-50%) scaleX(1);
           transform: translateX(-50%) scaleX(1);
   opacity: 1;
 }
+#navbar #hamburger {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 25px;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+#navbar #hamburger span {
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #67CAB9;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+#navbar #hamburger span:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+#navbar #hamburger span:nth-child(2) {
+  top: 10px;
+  left: 0;
+}
+#navbar #hamburger span:nth-child(3) {
+  top: 20px;
+  left: 0;
+}
 @media screen and (max-width: 900px) {
-  nav .links {
-    display: none;
+  #navbar {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #navbar .logo {
+    margin-left: 50px;
+  }
+  #navbar #links_container {
+    position: fixed;
+    top: 0;
+    right: -200px;
+    height: 100vh;
+    background-color: #282626;
+  }
+  #navbar #links_container .links-contain {
+    margin-top: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 200px;
+  }
+  #navbar #links_container .links-contain li {
+    padding: 20px 40px;
+  }
+  #navbar #links_container.open {
+    right: 0;
+  }
+  #navbar #hamburger {
+    text-align: center;
+    display: block;
+    position: fixed;
+    top: 40px;
+    right: 50px;
+    width: 40px;
+  }
+  #navbar #hamburger.open {
+    right: 80px;
+  }
+  #navbar #hamburger.open span:nth-child(1) {
+    top: 10px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  #navbar #hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  #navbar #hamburger.open span:nth-child(3) {
+    top: 10px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
 }
 
