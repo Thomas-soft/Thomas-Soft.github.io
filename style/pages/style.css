@@ -352,6 +352,7 @@ a, button {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 100px;
+  overflow-x: hidden;
 }
 .presentation-container .presentation-contain {
   display: grid;
