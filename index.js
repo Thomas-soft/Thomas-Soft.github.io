@@ -7,7 +7,7 @@ const progress_bar = document.getElementById("progress_bar");
 
 let lastScrollY = 0;
 
-const inputs = document.querySelectorAll("input[type='text'], input[type='email'], input[type='textarea']");
+const inputs = document.querySelectorAll("input[type='text'], input[type='email'], textarea");
 let good = [false, false];
 
 new Typewriter(txtAnim,{
@@ -142,7 +142,6 @@ form.addEventListener("submit", (e) =>
         inputs.forEach(input =>
             {
                 object[`${input.name}`] = input.value;
-                console.log(input.name, input.value);
             })
     
         console.log(object);

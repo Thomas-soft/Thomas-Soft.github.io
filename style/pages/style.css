@@ -34,12 +34,6 @@ input, textarea, a, button {
   z-index: 1000;
 }
 
-span {
-  color: red;
-  font-size: 0.8rem;
-  visibility: hidden;
-}
-
 a, button {
   cursor: pointer;
 }
@@ -627,6 +621,11 @@ a, button {
 }
 .contact-container .contain textarea {
   height: 200px;
+}
+.contact-container .contain span {
+  color: red;
+  font-size: 0.8rem;
+  visibility: hidden;
 }
 .contact-container .submit-content {
   width: 100%;
