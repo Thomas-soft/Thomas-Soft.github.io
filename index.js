@@ -7,6 +7,9 @@ const progress_bar = document.getElementById("progress_bar");
 
 let lastScrollY = 0;
 
+const inputs = document.querySelectorAll("input[type='text'], input[type='email'], input[type='textarea']");
+let good = [false, false];
+
 new Typewriter(txtAnim,{
     loop: true,
     deleteSpeed: 20
@@ -18,6 +21,7 @@ new Typewriter(txtAnim,{
 .typeString("Site <span style=\"color: #ec69ec;\">bientôt opérationnel</span> !")
 .pauseFor(1000)
 .start();
+
 
 window.addEventListener("scroll", () =>
 {
@@ -91,5 +95,60 @@ window.addEventListener("scroll", () =>
     {
         contact.style.transform = "translateY(0)";
         contact.style.opacity = 1;
+    }
+});
+
+inputs.forEach(input =>
+{
+    input.addEventListener("input", (e) =>
+    {
+        if (e.target.id === "name_input")
+        {
+            if (input.value.length < 3 || input.value.length > 20)
+            {
+                name_error.style.visibility = "visible";
+                good[0] = false;
+            }
+            else
+            {
+                name_error.style.visibility = "hidden";
+                good[0] = true;
+            }
+        }
+        if (e.target.id === "email_input")
+        {
+            if (email_input.value.match(/^[\w._-]+@[\w-]+\.[a-z]{2,4}$/i))
+            {
+                email_error.style.visibility = "hidden";
+                good[1] = true;
+            }
+            else
+            {
+                email_error.style.visibility = "visible";
+                good[1] = false;
+            }
+        }
+    });
+});
+
+form.addEventListener("submit", (e) =>
+{
+    e.preventDefault();
+
+    if (good.every(element => element === true))
+    {
+        const object = {}
+    
+        inputs.forEach(input =>
+            {
+                object[`${input.name}`] = input.value;
+                console.log(input.name, input.value);
+            })
+    
+        console.log(object);
+    }
+    else
+    {
+        alert("Veuillez remplir correctement les champs.");
     }
 });
