@@ -98,35 +98,71 @@ window.addEventListener("scroll", () =>
     }
 });
 
+let name, email;
+
+const display_error = (input, message, visible) =>
+{
+    error_content = document.querySelector(`#${input.name}_error`);
+    if (visible)
+    {
+        error_content.style.visibility = "visible";
+        error_content.textContent = message;
+        input.style.color = "red";
+        name = null;
+        email = null;
+    }
+    else
+    {
+        error_content.style.visibility = "hidden";
+        input.style.color = "white";
+        name = input.value;
+        email = input.value;
+    }
+};
+
+const check_name = (input) =>
+{
+    if (!input.value.match(/^[éèâïùça-zA-Z0-9\_-]+$/) && input.value.length > 0)
+    {
+        display_error(input, "Votre nom ne doit pas contenir de caractères spéciaux.", true);
+    }
+    else if (input.value.length > 0 && (input.value.length < 3 || input.value.length > 20))
+    {
+        display_error(input, "Votre nom doit contenir entre 3 et 20 caractères.", true);
+    }
+    else
+    {
+        display_error(input, "");
+    }
+};
+
+const check_email = (input) =>
+{
+    if (!email_input.value.match(/^[\w._-]+@[\w-]+\.[a-z]{2,4}$/i) && input.value.length > 0)
+    {
+        display_error(input, "L'email saisie n'est pas valide.", true);
+    }
+    else
+    {
+        display_error(input, "");
+    }
+};
+
 inputs.forEach(input =>
 {
     input.addEventListener("input", (e) =>
     {
-        if (e.target.id === "name_input")
-        {
-            if (input.value.length < 3 || input.value.length > 20)
-            {
-                name_error.style.visibility = "visible";
-                good[0] = false;
-            }
-            else
-            {
-                name_error.style.visibility = "hidden";
-                good[0] = true;
-            }
-        }
-        if (e.target.id === "email_input")
-        {
-            if (email_input.value.match(/^[\w._-]+@[\w-]+\.[a-z]{2,4}$/i))
-            {
-                email_error.style.visibility = "hidden";
-                good[1] = true;
-            }
-            else
-            {
-                email_error.style.visibility = "visible";
-                good[1] = false;
-            }
+        switch (e.target.id) {
+            case "name_input":
+                check_name(input);
+                break;
+
+            case "email_input":
+                check_email(input);
+                break;
+            
+            default:
+                break;
         }
     });
 });
@@ -135,10 +171,10 @@ form.addEventListener("submit", (e) =>
 {
     e.preventDefault();
 
-    if (good.every(element => element === true))
+    if (name && email)
     {
         const object = {}
-    
+
         inputs.forEach(input =>
             {
                 object[`${input.name}`] = input.value;
