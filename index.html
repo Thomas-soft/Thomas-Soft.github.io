@@ -138,21 +138,21 @@
             <form class="contact-contain" action="" id="form">
                 <div class="username-contain contain">
                     <label for="name">Nom</label>
-                    <input class="input-username" type="text" name="name" id="name_input" placeholder="Votre nom">
+                    <input class="input-username" type="text" name="name" id="name_input" placeholder="Votre nom" autocomplete="off">
                     <span id="name_error">Votre pseudo doit contenir entre 3 et 20 caractères.</span>
                 </div>
                 <div class="email-contain contain">
                     <label for="email">Email</label>
-                    <input class="input-email" type="email" name="email" id="email_input" placeholder="Votre email">
+                    <input class="input-email" type="email" name="email" id="email_input" placeholder="Votre email" autocomplete="email">
                     <span id="email_error">Email invalide.</span>
                 </div>
                 <div class="title-contain contain">
                     <label for="title">Sujet</label>
-                    <input class="input-title" type="text" name="subject" id="title_input" placeholder="Sujet">
+                    <input class="input-title" type="text" name="subject" id="title_input" placeholder="Sujet" autocomplete="off">
                 </div>
                 <div class="description-contain contain">
                     <label for="description">Message</label>
-                    <textarea class="input-description" name="description" id="textarea_input" placeholder="Description"></textarea>
+                    <textarea class="input-description" name="description" id="textarea_input" placeholder="Description" autocomplete="off"></textarea>
                 </div>
                 <div class="submit-content">
                     <button type="submit">Envoyer</button>
